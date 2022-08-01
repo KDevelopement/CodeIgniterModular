@@ -71,7 +71,7 @@ Breaking Changes:
 
 Enhancements:
 
-- All password-related features have been moved to a new class, `Myth\Auth\Password`, and can be accessed statically.
+- All password-related features have been moved to a new class, `Auth\Password`, and can be accessed statically.
 - New Slovak translation
 - New German translation
 - New Indonesian translation
