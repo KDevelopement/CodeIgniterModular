@@ -100,7 +100,7 @@ The biggest fix this time around was by michalsn that restricts the fields passe
 to only those defined in Config\Auth::$validFields and $personalFields, as well as password. This stops
 someone from passing in `active=1` in your form and bypassing activation. If you cannot update Myth:Auth
 due to core CodeIgniter version requirements, then please adjust your published AuthController as
-[shown here](https://github.com/lonnieezell/myth-auth/blob/develop/src/Controllers/AuthController.php#L167).
+[shown here](../Controllers/AuthController.php#L167).
 
 Enhancements:
 
