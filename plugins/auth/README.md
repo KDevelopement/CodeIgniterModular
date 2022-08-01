@@ -53,7 +53,7 @@ namespace to the **$psr4** array. For example, if you copied it into **app/Third
 
 ### Upgrading
 
-Be sure to check the [Changes Docs](https://github.com/lonnieezell/myth-auth/blob/develop/docs/_changes.md) for
+Be sure to check the [Changes Docs](docs/_changes.md) for
 necessary steps to take after upgrading versions.
 
 ## Configuration
@@ -98,11 +98,11 @@ You can easily override the views used by editing Config/Auth.php, and changing 
 within the `$views` variable: 
 
     public $views = [
-        'login'     => 'Myth\Auth\Views\login',
-        'register'  => 'Myth\Auth\Views\register',
-        'forgot'    => 'Myth\Auth\Views\forgot',
-        'reset'     => 'Myth\Auth\Views\reset',
-        'emailForgot' => 'Myth\Auth\Views\emails\forgot',
+        'login'     => 'Auth\Views\login',
+        'register'  => 'Auth\Views\register',
+        'forgot'    => 'Auth\Views\forgot',
+        'reset'     => 'Auth\Views\reset',
+        'emailForgot' => 'Auth\Views\emails\forgot',
     ];
 
 NOTE: If you're not familiar with how views can be namespaced in CodeIgniter, please refer to 
@@ -150,7 +150,7 @@ you must first edit **app/Config/Validation.php** and add the new ruleset to the
         \CodeIgniter\Validation\FormatRules::class,
         \CodeIgniter\Validation\FileRules::class,
         \CodeIgniter\Validation\CreditCardRules::class,
-        \Myth\Auth\Authentication\Passwords\ValidationRules::class,
+        \Auth\Authentication\Passwords\ValidationRules::class,
     ];
     
 Now you can use `strong_password` in any set of rules for validation:
@@ -236,7 +236,7 @@ the list of active collectors:
 		\CodeIgniter\Debug\Toolbar\Collectors\Timers::class,
 		\CodeIgniter\Debug\Toolbar\Collectors\Database::class,
         ...
-		\Myth\Auth\Collectors\Auth::class,
+		\Auth\Collectors\Auth::class,
 	];
 ```
 
@@ -248,9 +248,9 @@ to users by group/role or permission with [Controller Filters](https://codeignit
 First, edit `application/Config/Filters.php` and add the following entries to the `aliases` property:
 
 ```php
-    'login'      => \Myth\Auth\Filters\LoginFilter::class,
-    'role'       => \Myth\Auth\Filters\RoleFilter::class,
-    'permission' => \Myth\Auth\Filters\PermissionFilter::class,
+    'login'      => \Auth\Filters\LoginFilter::class,
+    'role'       => \Auth\Filters\RoleFilter::class,
+    'permission' => \Auth\Filters\PermissionFilter::class,
 ```
 
 **Global restrictions**
