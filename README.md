@@ -39,6 +39,10 @@ framework are exposed.
 
 **Please** read the user guide for a better explanation of how CI4 works!
 
+## Plugin - Auth (Myth:Auth)
+
+##### [See more about the Auth plugin.](https://github.com/k7brasil/CodeIgniterModular/tree/main/plugins/auth)
+
 ## Repository Management
 
 We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
